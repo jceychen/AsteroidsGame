@@ -1,10 +1,36 @@
-//your variable declarations here
+Spaceship chunky;
+Star[] twinkle = new Star[200];
 public void setup() 
 {
-  //your code here
+  size(600,600);
+  background(0);
+  chunky = new Spaceship();
+  for (int i = 0; i < twinkle.length; i++){
+    twinkle[i] = new Star();
+  }
 }
 public void draw() 
 {
-  //your code here
+  chunky.show();
+  chunky.move();
+  for (int i = 0; i < twinkle.length; i++){
+    twinkle[i].show();
+  }
+}
+public void keyPressed(){
+  if(keyPressed){
+    if(key == 'a' || key == 'A'){
+      chunky.turn(-10);
+    }
+    if(key == 'd' || key == 'D'){
+      chunky.turn(10);
+    }
+    if(key == 'w' || key == 'W'){
+      chunky.accelerate(1);
+    }
+    if(key == 'h' || key == 'H'){
+      chunky.hyperspace();
+    }
+  }
 }
 
