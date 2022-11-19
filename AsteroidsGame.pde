@@ -3,7 +3,6 @@ Star[] twinkle = new Star[200];
 public void setup() 
 {
   size(600,600);
-  background(0);
   chunky = new Spaceship();
   for (int i = 0; i < twinkle.length; i++){
     twinkle[i] = new Star();
@@ -11,6 +10,7 @@ public void setup()
 }
 public void draw() 
 {
+  background(0);
   chunky.show();
   chunky.move();
   for (int i = 0; i < twinkle.length; i++){
