@@ -10,8 +10,6 @@ public void setup()
 }
 public void draw(){
   background(0);
-  chunky.show();
-  chunky.move();
   for (int i = 0; i < twinkle.length; i++){
     twinkle[i].show();
   }
@@ -31,5 +29,7 @@ public void keyPressed(){
       chunky.hyperspace();
     }
   }
+  chunky.show();
+  chunky.move();
 }
 
