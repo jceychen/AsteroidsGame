@@ -8,8 +8,7 @@ public void setup()
     twinkle[i] = new Star();
   }
 }
-public void draw() 
-{
+public void draw(){
   background(0);
   chunky.show();
   chunky.move();
