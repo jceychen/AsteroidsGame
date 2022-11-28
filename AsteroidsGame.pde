@@ -25,7 +25,7 @@ public void keyPressed(){
       chunky.turn(10);
     }
     if(key == 'w' || key == 'W'){
-      chunky.accelerate(1);
+      chunky.accelerate(2);
     }
     if(key == 'h' || key == 'H'){
       chunky.hyperspace();
