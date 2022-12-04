@@ -19,7 +19,7 @@ class Asteroid extends Floater
     xCorners[5] = (int)(Math.random()*5)-15;
     yCorners[5] = (int)(Math.random()*5);
 
-    rotation = (int)(Math.random()*20)-10;
+    rotation = (int)(Math.random()*20)-15;
     myCenterX = (int)(Math.random()*600);
     myCenterY = (int)(Math.random()*600);
     myXspeed = myYspeed = (int)(Math.random()*5)-2;
