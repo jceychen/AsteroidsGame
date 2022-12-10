@@ -28,7 +28,7 @@ public void draw()
     for (int j = 0; j < spunky.size(); j++) {
       spunky.get(j).show();
       spunky.get(j).move();
-      if (dist((float)spunky.get(j).getX(), (float)spunky.get(j).getY(), (float)funky.get(i).getX(), (float)funky.get(i).getY()) < 30) {
+      if (dist((float)spunky.get(j).getX(), (float)spunky.get(j).getY(), (float)funky.get(i).getX(), (float)funky.get(i).getY()) < 20) {
         funky.remove(i);
         spunky.remove(j);
       }
