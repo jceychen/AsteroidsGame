@@ -19,6 +19,11 @@ public void draw()
   for (int i = 0; i < twinkle.length; i++) {
     twinkle[i].show();
   }
+  for (int i = 0; i < spunky.size(); i++) {
+    spunky.get(i).show();
+    spunky.get(i).move();
+  }
+  
   for (int i = 0; i < funky.size(); i++) {
     funky.get(i).show();
     funky.get(i).move();
@@ -26,12 +31,9 @@ public void draw()
       funky.remove(i);
     }
     for (int j = 0; j < spunky.size(); j++) {
-      spunky.get(j).show();
-      spunky.get(j).move();
       if (dist((float)spunky.get(j).getX(), (float)spunky.get(j).getY(), (float)funky.get(i).getX(), (float)funky.get(i).getY()) < 20) {
         funky.remove(i);
         spunky.remove(j);
-        break;
       }
     }
   }
