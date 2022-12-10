@@ -7,7 +7,6 @@ class Bullet extends Floater
     myXspeed = 2 * Math.cos(dRadians) + chunky.getXspeed();
     myYspeed = 2 * Math.sin(dRadians) + chunky.getYspeed();
     myPointDirection = (int)(chunky.getPointDirection());
-    myColor = color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
   }
   public void show()
   {
@@ -49,8 +48,5 @@ class Bullet extends Floater
   }
   public double getPointDirection() {
     return myPointDirection;
-  }
-  public int getColor() {
-    return myColor;
   }
 }
