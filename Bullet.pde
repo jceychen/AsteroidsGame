@@ -7,6 +7,7 @@ class Bullet extends Floater
     myXspeed = 3 * Math.cos(dRadians) + chunky.getXspeed();
     myYspeed = 3 * Math.sin(dRadians) + chunky.getYspeed();
     myPointDirection = (int)(chunky.getPointDirection());
+    accelerate(6.0);
   }
   public void show()
   {
