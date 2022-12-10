@@ -59,7 +59,7 @@ public void keyPressed()
       chunky.myYspeed = 0;
       chunky.myPointDirection = (int)(Math.random()*360);
     }
-    if (key == 's'){
+    if (key == 's' || key == 'S'){
       spunky.add(new Bullet(chunky));
     }
   }
