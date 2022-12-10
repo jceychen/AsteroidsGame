@@ -2,11 +2,11 @@ class Bullet extends Floater
 {
   public Bullet(Spaceship chunky) {
     double dRadians = myPointDirection*(Math.PI/180);
-    myCenterX = (int)(chunky.getX());
-    myCenterY = (int)(chunky.getY());
+    myCenterX = chunky.getX();
+    myCenterY = chunky.getY();
     myXspeed = 3 * Math.cos(dRadians) + chunky.getXspeed();
     myYspeed = 3 * Math.sin(dRadians) + chunky.getYspeed();
-    myPointDirection = (int)(chunky.getPointDirection());
+    myPointDirection = chunky.getPointDirection();
     accelerate(6.0);
   }
   public void show()
@@ -20,11 +20,11 @@ class Bullet extends Floater
     myCenterX += myXspeed;
     myCenterY += myYspeed;
   }
-  public int getX() {
-    return (int)myCenterX;
+  public double getX() {
+    return myCenterX;
   }
-  public int getY() {
-    return (int)myCenterY;
+  public double getY() {
+    return myCenterY;
   }
   public double getXspeed() {
     return myXspeed;
