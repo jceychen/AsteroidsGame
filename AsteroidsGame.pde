@@ -1,6 +1,7 @@
 Spaceship chunky;
 Star[] twinkle = new Star[200];
 ArrayList <Asteroid> funky = new ArrayList <Asteroid>();
+ArrayList <Bullet> spunky = new ArrayList <Bullet>();
 public void setup()
 {
   size(600, 600);
@@ -23,6 +24,14 @@ public void draw()
     funky.get(i).move();
     if (dist((float)chunky.getX(), (float)chunky.getY(), (float)funky.get(i).getX(), (float)funky.get(i).getY()) <= 20) {
       funky.remove(i);
+    }
+    for (int j = 0; j < spunky.size(); j++) {
+      spunky.get(j).show();
+      spunky.get(j).move();
+      if (dist((float)spunky.get(j).getX(), (float)spunky.get(j).getY(), (float)funky.get(i).getX(), (float)funky.get(i).getY()) < 30) {
+        funky.remove(i);
+        spunky.remove(j);
+      }
     }
   }
   chunky.show();
@@ -50,5 +59,7 @@ public void keyPressed()
       chunky.myYspeed = 0;
       chunky.myPointDirection = (int)(Math.random()*360);
     }
+    if (key == ' ')
+      spunky.add(new Bullet(chunky));
   }
 }
