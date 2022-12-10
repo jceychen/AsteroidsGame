@@ -31,6 +31,7 @@ public void draw()
       if (dist((float)spunky.get(j).getX(), (float)spunky.get(j).getY(), (float)funky.get(i).getX(), (float)funky.get(i).getY()) < 20) {
         funky.remove(i);
         spunky.remove(j);
+        break;
       }
     }
   }
